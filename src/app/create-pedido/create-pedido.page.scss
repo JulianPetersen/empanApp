@@ -1,0 +1,40 @@
+ion-content{
+    .header{
+      width: 100%;
+      display:flex ;
+      justify-content: center;
+      background-color: #EBDC8E;
+      h5{
+        padding: 40px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  
+    .listPersons{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .person{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        ion-card{
+          width: 80%;
+          background-color:#EBDC8E;
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          color: black;
+          font-weight: bold;
+        }
+        ion-icon{
+          
+          color: #EBDC8E;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+  }

@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <h5>Crea tu lista de empanadas</h5>
+  </div>
+
+  <div class="content">
+    <div class="form">
+      <ion-item>
+        <ion-input [(ngModel)]="nombre" label="Nombre" labelPlacement="floating" placeholder="Ingrese el nombre de un comenzal"></ion-input>
+      </ion-item>
+      <ion-button (click)="addPerson()">Aceptar</ion-button>
+    </div>
+
+    <div class="comensales">
+      <h5>Comensales</h5>
+
+      <div class="listNombres" *ngFor="let nombre of listaNombres let i = index">
+        <ion-card >{{nombre.name}}</ion-card>
+        <ion-button fill="clear" (click)="deletePerson(i)"><ion-icon name="trash" ></ion-icon></ion-button>
+      </div>
+      
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="goToCreatePedido()" >Continuar</ion-button>
+</ion-footer>

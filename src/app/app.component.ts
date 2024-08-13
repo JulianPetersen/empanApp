@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  
+  constructor() {
+    this.createGustos()
+  }
+
+  gustos:string[] = [
+    'Carne',
+    'Jamon y queso',
+    'pollo',
+    'humita',
+    'verdura'
+  ]
+  
+
+  createGustos(){
+
+   let listGusstos = localStorage.getItem('gustosEmpanadas')
+   if(listGusstos == null){
+    localStorage.setItem('gustosEmpanadas', JSON.stringify(this.gustos) )
+   }else{
+    return
+   }
+   
+  }
 }

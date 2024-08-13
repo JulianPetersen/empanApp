@@ -1,0 +1,24 @@
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <h5>Elegir Empanadas para {{persona}}</h5>
+  </div>
+
+  <div class="content">
+    <ion-item>
+      <ion-select label="Gusto" placeholder="" [(ngModel)]="gustoSelected" (ionChange)="mostrarInput()">
+        <ion-select-option value="{{gusto}}" *ngFor="let gusto of gustos" >{{gusto}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="viewInputCantidad">
+      <ion-input  [(ngModel)]="cantidad" label="cantidad" labelPlacement="floating" type="number"></ion-input>
+    </ion-item>
+
+    <ion-button *ngIf="viewInputCantidad" fill="clear" (click)="agregarEmpanada()">Agregar</ion-button>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-button >Terminar</ion-button>
+</ion-footer>

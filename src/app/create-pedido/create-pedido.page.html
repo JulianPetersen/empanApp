@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <h5>Elegir Empanadas</h5>
+  </div>
+
+
+  <div class="listPersons">
+    <div class="person" *ngFor="let personas of listaNombres let i = index">
+      <ion-card>{{personas.name}}</ion-card>  
+      <ion-button fill="clear" (click)="openModal(personas.name,i)"><ion-icon name="add"></ion-icon></ion-button>
+    </div>
+  </div>
+
+
+</ion-content>

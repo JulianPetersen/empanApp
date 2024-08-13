@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'create-list',
+    loadChildren: () => import('./create-list/create-list.module').then( m => m.CreateListPageModule)
+  },
+  {
+    path: 'create-pedido',
+    loadChildren: () => import('./create-pedido/create-pedido.module').then( m => m.CreatePedidoPageModule)
+  },
+  {
+    path: 'select-empanadas',
+    loadChildren: () => import('./select-empanadas/select-empanadas.module').then( m => m.SelectEmpanadasPageModule)
+  },
 ];
 
 @NgModule({

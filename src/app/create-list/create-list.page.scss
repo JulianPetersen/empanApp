@@ -1,0 +1,60 @@
+ion-content{
+    .header{
+        width: 100%;
+        display:flex ;
+        justify-content: center;
+        background-color: #EBDC8E;
+        h5{
+          padding: 40px;
+          color: white;
+          font-weight: bold;
+        }
+    }
+
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            ion-button{
+                --background:gray;
+                margin-top: 20px;
+                
+            }
+        }
+        .comensales{
+            width: 80%;
+            margin-top: 50px;
+            ion-card{
+                padding: 10px;
+                width: 80%;
+            }
+            .listNombres{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                ion-button{
+                    color:red
+                }
+            }
+        }
+    }
+
+}
+
+ion-footer{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    ion-button{
+        width: 80%;
+        --background: #EBDC8E
+    }
+}
