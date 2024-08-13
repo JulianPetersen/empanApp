@@ -1,0 +1,7 @@
+{
+  "name": "empanApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
